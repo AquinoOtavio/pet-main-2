@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
+
+/* Base */
+:root {
+  --color-black: #000000;
+  --color-cyan: #b6e4f9;
+  --color-cyan-alpha: rgba(254, 254, 254, 0.75);
+  --color-green: #31b564;
+  --color-dark: #78350f;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-black);
+  margin: 0;
+  padding: 0;
+  background: var(--color-cyan);
+  background-image: linear-gradient(
+    115deg,
+    var(--color-cyan-alpha),
+    rgba(255, 255, 255, 0.7)
+  ),
+  url(https://i.pinimg.com/736x/44/d9/8c/44d98cccb725fd3a80c0446b9b2e646d.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 2.2rem;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+/* Adicione esta classe para a div que contém as imagens */
+.apadrinhamento-container {
+  display: flex;
+  align-items: flex-start; /* Alinha a imagem no topo */
+  justify-content: space-between; /* Espaça os elementos para as extremidades */
+  position: relative; /* Necessário para o posicionamento absoluto */
+  width: 100%; /* Garante que a div ocupe a largura total disponível */
+  padding: 1rem; /* Adiciona um pouco de preenchimento interno */
+  margin: 0; /* Remove qualquer margem externa */
+}
+
+/* Adicione estas regras para a imagem fixa no topo */
+.apadrinhamento-container .top-image {
+  position: absolute; /* Posiciona a imagem de forma fixa dentro do contêiner */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  z-index: 1; /* Garante que a imagem fique acima dos outros conteúdos */
+  width: 100%; /* Garante que a imagem ocupe a largura total */
+}
+
+/* Adicione esta classe para a imagem do QR code */
+.qr-code {
+  margin-left: auto; /* Move a imagem para a direita */
+  margin-top: 100px;
+}
+
+/* Remova qualquer margem ou preenchimento externo para evitar recuos */
+.container, .apadrinhamento-container {
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsivo */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+  .apadrinhamento-container {
+    flex-direction: column; /* Alinha os itens verticalmente em dispositivos móveis */
+    padding: 0; /* Remove o preenchimento para garantir que ocupe toda a largura */
+  }
+
+  .apadrinhamento-container .top-image {
+    width: 100%; /* Garante que a imagem ocupe a largura total disponível */
+    margin-bottom: 1rem; /* Adiciona um pequeno espaçamento abaixo da imagem */
+  }
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+  background: var(--color-green);
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  color: #0400ff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
