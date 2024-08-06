@@ -1,19 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 /* Base */
-:root {
-  --color-black: #000000;
-  --color-cyan: #b6e4f9;
-  --color-cyan-alpha: rgba(254, 254, 254, 0.75);
-  --color-green: #31b564;
-  --color-dark: #78350f;
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 body {
   font-family: "Inter", sans-serif;
@@ -46,93 +35,143 @@ p {
   margin: 0 0 0.5rem;
 }
 
-/* Adicione esta classe para a div que contém as imagens */
-.apadrinhamento-container {
+/* Estilos para a seção de habilidades */
+section#habilidades {
+  padding: 3rem 10rem; /* Mantém o padding original para telas maiores */
+  background-color: #249899;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+section#habilidades h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Lilita One", sans-serif;
+  margin-bottom: 2rem;
+}
+
+section#habilidades p {
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+section#habilidades div {
   display: flex;
-  align-items: flex-start; /* Alinha a imagem no topo */
-  justify-content: space-between; /* Espaça os elementos para as extremidades */
-  position: relative; /* Necessário para o posicionamento absoluto */
-  width: 100%; /* Garante que a div ocupe a largura total disponível */
-  padding: 1rem; /* Adiciona um pouco de preenchimento interno */
-  margin: 0; /* Remove qualquer margem externa */
+  border-radius: 1rem;
+  overflow: hidden; /* Garante que a animação não ultrapasse o contêiner */
 }
 
-/* Adicione estas regras para a imagem fixa no topo */
-.apadrinhamento-container .top-image {
-  position: absolute; /* Posiciona a imagem de forma fixa dentro do contêiner */
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); /* Centraliza horizontalmente */
-  z-index: 1; /* Garante que a imagem fique acima dos outros conteúdos */
-  width: 100%; /* Garante que a imagem ocupe a largura total */
-}
-
-/* Adicione esta classe para a imagem do QR code */
-.qr-code {
-  margin-left: auto; /* Move a imagem para a direita */
-  margin-top: 100px;
-}
-
-/* Remova qualquer margem ou preenchimento externo para evitar recuos */
-.container, .apadrinhamento-container {
-  margin: 0;
-  padding: 0;
-}
-
-/* Responsivo */
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-/* Estilos específicos para dispositivos móveis */
-@media (max-width: 768px) {
-  .apadrinhamento-container {
-    flex-direction: column; /* Alinha os itens verticalmente em dispositivos móveis */
-    padding: 0; /* Remove o preenchimento para garantir que ocupe toda a largura */
-  }
-
-  .apadrinhamento-container .top-image {
-    width: 100%; /* Garante que a imagem ocupe a largura total disponível */
-    margin-bottom: 1rem; /* Adiciona um pequeno espaçamento abaixo da imagem */
-  }
-}
-
-input,
-button,
-select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-button {
-  border: none;
-  background: var(--color-green);
+section#habilidades div span#python {
+  background-color: #02020e;
   color: #fff;
+  text-align: center;
+  padding: .3rem;
+  font-family: "Inter", sans-serif;
+  border-radius: 1rem;
+  width: 100%;
+  transform: translateX(-100%); /* Começa fora da tela à esquerda */
+  animation: slideIn 1s forwards; /* Aplica a animação */
+}
+
+section#habilidades div span#html {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: .3rem;
+  border-radius: 1rem;
+  font-family: "Inter", sans-serif;
+  width: 70%;
+  transform: translateX(-100%); /* Começa fora da tela à esquerda */
+  animation: slideIn 1s forwards; /* Aplica a animação */
+}
+
+section#habilidades div span#css {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: .3rem;
+  border-radius: 1rem;
+  width: 30%;
+  font-family: "Inter", sans-serif;
+  transform: translateX(-100%); /* Começa fora da tela à esquerda */
+  animation: slideIn 1s forwards; /* Aplica a animação */
+}
+
+/* Responsividade adicional */
+@media (max-width: 768px) {
+  section#habilidades {
+    padding: 2rem 1rem; /* Reduz o padding para telas menores */
+  }
+
+  section#habilidades h2 {
+    font-size: 1.8rem; /* Ajusta o tamanho da fonte para telas menores */
+    margin-bottom: 1rem; /* Reduz a margem inferior */
+  }
+
+  section#habilidades p {
+    font-size: 1.1rem; /* Ajusta o tamanho da fonte para telas menores */
+  }
+
+  section#habilidades div {
+    flex-direction: column; /* Alinha os itens verticalmente em telas menores */
+  }
+
+  section#habilidades div span {
+    width: 100%; /* Garante que os spans se ajustem à largura da tela */
+  }
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0); /* Move o elemento para a sua posição final */
+  }
+}
+
+/*GASTOS */
+
+/* Estilos para a seção de gastos */
+section#gastos {
+  padding: 2rem;
+  background-color: #249899;
+
+  }
+
+section#gastos h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Lilita One", sans-serif;
+  font-size: 300%;
+  
+}
+
+.table-container {
+  overflow-x: auto; /* Permite rolar horizontalmente se necessário */
+  -webkit-overflow-scrolling: touch; /* Suporte para rolagem suave em dispositivos móveis */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Garante que a tabela tenha uma largura mínima para permitir rolagem */
+}
+
+th, td {
+  border: 1px solid #000000;
   padding: 0.75rem;
-  border-radius: 0.25rem;
-  cursor: pointer;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+th {
+  background-color: #333;
+  color: #fff;
 }
 
-a {
-  color: #0400ff;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
 }
