@@ -68,7 +68,7 @@ section#habilidades div span#python {
   padding: .3rem;
   font-family: "Inter", sans-serif;
   border-radius: 1rem;
-  width: 100%;
+  width: 60%;
   transform: translateX(-100%); /* Começa fora da tela à esquerda */
   animation: slideIn 1s forwards; /* Aplica a animação */
 }
@@ -80,7 +80,7 @@ section#habilidades div span#html {
   padding: .3rem;
   border-radius: 1rem;
   font-family: "Inter", sans-serif;
-  width: 70%;
+  width: 25%;
   transform: translateX(-100%); /* Começa fora da tela à esquerda */
   animation: slideIn 1s forwards; /* Aplica a animação */
 }
@@ -91,7 +91,7 @@ section#habilidades div span#css {
   text-align: center;
   padding: .3rem;
   border-radius: 1rem;
-  width: 30%;
+  width: 15%;
   font-family: "Inter", sans-serif;
   transform: translateX(-100%); /* Começa fora da tela à esquerda */
   animation: slideIn 1s forwards; /* Aplica a animação */
