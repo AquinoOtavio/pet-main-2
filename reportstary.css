@@ -3,7 +3,16 @@
 
 /* Base */
 
+  #logo img {
+    transform: scale(1.5); /* Ajuste o valor conforme necessário */
+    transition: transform 0.3s ease; /* Adiciona uma animação suave ao redimensionar */
+  }
 
+  /* Ajuste o tamanho máximo da logo para que ela não ultrapasse o tamanho do cabeçalho */
+  #logo {
+    max-width: 100%;
+    overflow: hidden; /* Impede que a imagem ultrapasse o container */
+  }
 body {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
