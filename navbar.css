@@ -13,20 +13,6 @@
 /*15736f*/
 /*7aaeae*/
 
-  #logo img {
-    transform: scale(1.5); /* Ajuste o valor conforme necessário */
-    transition: transform 0.3s ease; /* Adiciona uma animação suave ao redimensionar */
-  }
-
-  /* Ajuste o tamanho máximo da logo para que ela não ultrapasse o tamanho do cabeçalho */
-  #logo {
-    max-width: 100%;
-    overflow: hidden; /* Impede que a imagem ultrapasse o container */
-  }
-/*footer{
-  background-color: #12934b;
-
-}*/
 
 .imagem-apd{
   position: static;
@@ -137,7 +123,16 @@
   margin-left: 9%; 
 
 }
+#logo img {
+    transform: scale(1.5); /* Ajuste o valor conforme necessário */
+    transition: transform 0.3s ease; /* Adiciona uma animação suave ao redimensionar */
+  }
 
+  /* Ajuste o tamanho máximo da logo para que ela não ultrapasse o tamanho do cabeçalho */
+#logo {
+    max-width: 100%;
+    overflow: hidden; /* Impede que a imagem ultrapasse o container */
+  }
 #logo:hover{
   transform: scale(1.05);
 }
